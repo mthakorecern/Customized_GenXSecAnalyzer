@@ -7,6 +7,12 @@ https://github.com/cms-sw/genproductions/blob/master/Utilities/calculateXSection
 
 ##  Usage: 
 `
+source /cvmfs/cms.cern.ch/cmsset_default.sh
+cmsrel CMSSW_15_0_10
+cd CMSSW_15_0_10/src/
+voms-proxy-init -voms cms -out /tmp/x509up_u10196 -valid 192:00
+git clone https://github.com/mthakorecern/Customized_GenXSecAnalyzer.git
+cd Customized_GenXSecAnalyzer/
 python3 run_genXsec_from_datasets.py -f datasets.txt -n <no-of-events>
 `
 
